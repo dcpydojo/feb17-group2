@@ -13,7 +13,7 @@ The e-mails to receive the notifications
 
 def main():
     curr_status = requests.get('https://www.opm.gov/json/operatingstatus.json').json()
-    print(curr_status['AppliesTo'],curr_status['Location']curr_status['ShortStatusMessage'])
+    print(curr_status['AppliesTo'],curr_status['Location'], curr_status['ShortStatusMessage'])
 
 
 def get_last_historical_status():
