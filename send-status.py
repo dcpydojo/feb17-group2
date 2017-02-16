@@ -13,8 +13,8 @@ TO_NUMBER = os.environ['TO_NUMBER']
 FROM_NUMBER = '+12025172178'
 
 def main():
-	curr_status = requests.get('https://www.opm.gov/json/operatingstatus.json').json()
-	print(curr_status['AppliesTo'],curr_status['ShortStatusMessage'])
+    curr_status = requests.get('https://www.opm.gov/json/operatingstatus.json').json()
+    print(curr_status['AppliesTo'],curr_status['Location'], curr_status['ShortStatusMessage'])
 
 
 def get_current_status():
