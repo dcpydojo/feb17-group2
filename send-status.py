@@ -12,7 +12,8 @@ The e-mails to receive the notifications
 """
 
 def main():
-    pass
+	curr_status = requests.get('https://www.opm.gov/json/operatingstatus.json').json()
+	print(curr_status['AppliesTo'],curr_status['ShortStatusMessage'])
 
 
 if __name__ == '__main__':
