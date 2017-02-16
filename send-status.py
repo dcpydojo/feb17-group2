@@ -15,5 +15,18 @@ def main():
     pass
 
 
+def get_last_historical_status():
+    """
+    Get historical status, limit to one
+
+    >>> status = get_last_historical_status()
+    >>> status['Title']
+    'Federal Government Operating Status in the Washington, DC, Area'
+    """
+    url = 'https://www.opm.gov/json/operatingstatushistory.json?count=1'
+    statuses = requests.get(url).json()
+    return statuses[0]
+
+
 if __name__ == '__main__':
     main()
